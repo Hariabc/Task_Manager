@@ -1,7 +1,14 @@
 import axios from "axios";
 
+let backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:5001/api";
+
+// Auto-correct missing /api suffix
+if (backendUrl && !backendUrl.endsWith("/api") && !backendUrl.endsWith("/api/")) {
+  backendUrl = backendUrl.replace(/\/$/, "") + "/api";
+}
+
 const instance = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL || "http://localhost:5001/api",
+  baseURL: backendUrl,
 });
 
 // Attach token automatically
