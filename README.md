@@ -6,6 +6,13 @@ This workspace houses both the **frontend** and **backend** applications in a un
 
 ---
 
+## 🌐 Live Deployments
+
+* **Live Site**: [https://task-manager-green-psi-31.vercel.app](https://task-manager-green-psi-31.vercel.app)
+* **API Endpoint**: [https://task-manager-n68i.onrender.com/api](https://task-manager-n68i.onrender.com/api)
+
+---
+
 ## 🚀 Features
 
 ### Frontend Client
