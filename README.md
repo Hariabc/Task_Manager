@@ -19,7 +19,7 @@ This workspace houses both the **frontend** and **backend** applications in a un
 * **🔐 User Authentication**: Login and sign-up flows with automatic token persistence.
 * **📋 Task Management**: Create, view, update (inline editing), and delete tasks.
 * **🔄 Status Toggles**: Easily transition tasks through `Todo` ➔ `In Progress` ➔ `Done` stages.
-* **🔍 Search & Advanced Filtering**: Filter tasks instantly by status, priority level, or search description.
+* **🔍 Search, Sorting & Filtering**: Filter tasks instantly by status or priority level, search by title/description, and sort by due date / date created.
 * **📊 Analytics Dashboard**: Live metrics tracking total tasks, completed vs. pending counts, and completion rate percentages.
 * **🌓 Dark Mode**: Seamless visual mode toggle for light and dark themes.
 
