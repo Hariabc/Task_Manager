@@ -17,6 +17,7 @@ const Dashboard = () => {
     status: "",
     priority: "",
     search: "",
+    sort: "",
     page: 1,
     limit: 5,
   });
@@ -182,6 +183,21 @@ const Dashboard = () => {
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
                     <option value="high">High</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="filter-sort">Sort By</label>
+                  <select
+                    id="filter-sort"
+                    value={filters.sort}
+                    onChange={(e) =>
+                      setFilters({ ...filters, sort: e.target.value, page: 1 })
+                    }
+                  >
+                    <option value="">Default (None)</option>
+                    <option value="dueDate">Due Date (Soonest first)</option>
+                    <option value="createdAt">Date Created (Newest first)</option>
                   </select>
                 </div>
               </div>
