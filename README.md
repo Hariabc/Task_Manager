@@ -152,3 +152,14 @@ npm run dev
 3. Set the build commands:
    * Build Command: `npm run build`
    * Output Directory: `dist`
+
+---
+
+## 💡 Design Decisions
+
+* **Unified Workspace Structure**: Co-locating frontend and backend folders in a single repository with root-level scripting enables developers to boot the entire stack concurrently using a single command (`npm run dev`).
+* **Vite 5 Downgrade**: Downgraded Vite to version 5 to expand environment compatibility (supporting Node.js 18+ and Node.js v20.17.0) and prevent issues with native Rolldown binary binding errors on Windows.
+* **Vanilla CSS design tokens**: Employed custom CSS properties and grid layouts instead of importing heavy CSS libraries. This achieves responsive grids, HSL theme values, light/dark mode transitions, and glassmorphic UI blurs with zero bundle overhead.
+* **Mongoose Indexing**: Indexed the `userId` field in the `Task` model. Since every dashboard query (filtering, searching, paginating, counting) is scoped per user, this index dramatically optimizes search query performance in MongoDB.
+* **SPA Routing Rewrite**: Configured `vercel.json` rewrite routing rules to ensure that client-side React Router routing works correctly and doesn't throw 404 errors on browser page refreshes.
+
